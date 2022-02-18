@@ -14,8 +14,12 @@ import model.Parking;
 @RequestMapping("/parking")
 
 public class ParkingController {
-	
-	private final ParkingService parkingService = new ParkingService();
+
+	private final ParkingService parkingService;
+
+	public ParkingController(ParkingService parkingService) {
+		this.parkingService = parkingService;
+	}
 
 	@GetMapping
 	public List<Parking> findAll() {

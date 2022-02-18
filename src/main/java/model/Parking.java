@@ -2,6 +2,9 @@ package model;
 
 import java.time.LocalDateTime;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class Parking {
 
 	private String id;
@@ -12,9 +15,6 @@ public class Parking {
 	private LocalDateTime entryDate;
 	private LocalDateTime exitDate;
 	private double bill;
-
-	public Parking() {
-	}
 
 	public Parking(String id, String license, String state, String model, String color) {
 		this.id = id;
